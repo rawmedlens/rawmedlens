@@ -1,0 +1,42 @@
+<!-- Root: index.html -->
+<!-- Already shared previously -->
+
+<!-- Page: gallery.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery - Rawmedlens</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, background: #4a0d0d; color: #eee; padding: 2em; max-width: 800px; margin: auto; line-height: 1.6; }
+    h1 { color: #fff; }
+    .post { border-bottom: 1px solid #666; padding-bottom: 1em; margin-bottom: 2em; }
+    img { max-width: 100%; border-radius: 8px; margin-top: 1em; }
+  </style>
+</head>
+<body>
+  <h1>Gallery</h1>
+
+  <div class="post">
+    <h2>Case Title Here</h2>
+    <p>Date: 2025-04-16</p>
+    <img src="example-image.jpg" alt="Medical case image">
+    <p>Description or case notes...</p>
+    <!-- Disqus embed will go here -->
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_config = function () {
+      this.page.url = window.location.href;
+      this.page.identifier = 'gallery-post-1';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://YOUR-DISQUS-SHORTNAME.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+    </script>
+  </div>
+</body>
+</html>
