@@ -1,40 +1,103 @@
-<!-- Page: qa.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+  <title>Rawmedlens – Q&A</title>
   <meta charset="UTF-8">
-  <title>Q&A - Rawmedlens</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { font-family: Arial; background: #4a0d0d; color: #eee; padding: 2em; max-width: 800px; margin: auto; line-height: 1.6; }
-    h1 { color: #fff; }
-    .qa { border-bottom: 1px solid #666; padding-bottom: 1em; margin-bottom: 2em; }
-    .burger { position: fixed; top: 1em; left: 1em; z-index: 1000; cursor: pointer; font-size: 24px; background: #900; padding: 0.5em 1em; border-radius: 8px; }
-    .nav { display: none; position: fixed; top: 3em; left: 1em; background: #222; padding: 1em; border-radius: 8px; }
-    .nav a { display: block; color: white; text-decoration: none; margin: 0.5em 0; }
+    body {
+      font-family: Arial;
+      background: #3a0000;
+      color: #eee;
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 1em;
+      left: 1em;
+      z-index: 1000;
+    }
+
+    .menu-toggle {
+      cursor: pointer;
+      font-size: 24px;
+      color: #fff;
+      background: none;
+      border: none;
+    }
+
+    .menu-items {
+      display: none;
+      background: #1a0000;
+      border-radius: 8px;
+      padding: 10px;
+      margin-top: 5px;
+    }
+
+    .menu-items a {
+      display: block;
+      padding: 8px;
+      text-decoration: none;
+      color: #eee;
+    }
+
+    .menu-items a:hover {
+      background: #600;
+    }
+
+    .qa-entry {
+      margin-bottom: 2em;
+      border-bottom: 1px solid #555;
+      padding-bottom: 1em;
+    }
+
+    .question {
+      font-weight: bold;
+      color: #ffcccc;
+    }
+
+    .answer {
+      margin-top: 0.5em;
+      color: #ddd;
+    }
   </style>
-</head>
-<body>
-  <div class="burger" onclick="toggleNav()">☰</div>
-  <div class="nav" id="navMenu">
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="statement.html">Statement</a>
-    <a href="faq.html">FAQ</a>
-    <a href="connections.html">Connections</a>
-    <a href="qa.html">Q&A</a>
-  </div>
   <script>
-    function toggleNav() {
-      var nav = document.getElementById('navMenu');
-      nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
     }
   </script>
+</head>
+<body>
 
-  <h1>Q&A</h1>
-  <div class="qa">
-    <p><strong>Q:</strong> Example question sent via the contact form</p>
-    <p><strong>A:</strong> Your written response here.</p>
+  <nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="menu-items" id="menu">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="statement.html">Statement</a>
+      <a href="faq.html">FAQ</a>
+      <a href="connections.html">Connections</a>
+      <a href="qa.html">Q&A</a>
+    </div>
+  </nav>
+
+  <h1>Questions & Answers</h1>
+  <p>This section features questions submitted through the contact form and my responses.</p>
+
+  <div class="qa-entry">
+    <div class="question">Q: Will there be new content added regularly?</div>
+    <div class="answer">A: Yes, I plan to update the gallery as often as possible with newly sourced materials.</div>
   </div>
+
+  <div class="qa-entry">
+    <div class="question">Q: Is it okay to use these images for personal study or art references?</div>
+    <div class="answer">A: Absolutely. The site is intended to be an educational resource. Just credit back if you're reposting anything!</div>
+  </div>
+
+  <!-- Add more Q&A blocks below as needed -->
 </body>
 </html>
