@@ -1,0 +1,21 @@
+<!-- Page: qa.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Q&A - Rawmedlens</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial; background: #4a0d0d; color: #eee; padding: 2em; max-width: 800px; margin: auto; line-height: 1.6; }
+    h1 { color: #fff; }
+    .qa { border-bottom: 1px solid #666; padding-bottom: 1em; margin-bottom: 2em; }
+  </style>
+</head>
+<body>
+  <h1>Q&A</h1>
+  <div class="qa">
+    <p><strong>Q:</strong> Example question sent via the contact form</p>
+    <p><strong>A:</strong> Your written response here.</p>
+  </div>
+</body>
+</html>
