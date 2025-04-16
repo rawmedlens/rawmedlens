@@ -1,36 +1,95 @@
-<!-- Page: statement.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+  <title>Rawmedlens – Statement</title>
   <meta charset="UTF-8">
-  <title>Statement - Rawmedlens</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { font-family: Arial; background: #4a0d0d; color: #eee; padding: 2em; max-width: 800px; margin: auto; line-height: 1.6; }
-    h1 { color: #fff; }
-    .burger { position: fixed; top: 1em; left: 1em; z-index: 1000; cursor: pointer; font-size: 24px; background: #900; padding: 0.5em 1em; border-radius: 8px; }
-    .nav { display: none; position: fixed; top: 3em; left: 1em; background: #222; padding: 1em; border-radius: 8px; }
-    .nav a { display: block; color: white; text-decoration: none; margin: 0.5em 0; }
+    body {
+      font-family: Arial;
+      background: #3a0000;
+      color: #eee;
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 1em;
+      left: 1em;
+      z-index: 1000;
+    }
+
+    .menu-toggle {
+      cursor: pointer;
+      font-size: 24px;
+      color: #fff;
+      background: none;
+      border: none;
+    }
+
+    .menu-items {
+      display: none;
+      background: #1a0000;
+      border-radius: 8px;
+      padding: 10px;
+      margin-top: 5px;
+    }
+
+    .menu-items a {
+      display: block;
+      padding: 8px;
+      text-decoration: none;
+      color: #eee;
+    }
+
+    .menu-items a:hover {
+      background: #600;
+    }
   </style>
-</head>
-<body>
-  <div class="burger" onclick="toggleNav()">☰</div>
-  <div class="nav" id="navMenu">
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="statement.html">Statement</a>
-    <a href="faq.html">FAQ</a>
-    <a href="connections.html">Connections</a>
-    <a href="qa.html">Q&A</a>
-  </div>
   <script>
-    function toggleNav() {
-      var nav = document.getElementById('navMenu');
-      nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
     }
   </script>
+</head>
+<body>
 
-  <h1>Statement</h1>
-  <p>[Detailed mission, purpose, and philosophical approach to medical imagery... you can fill this in later.]</p>
+  <nav>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="menu-items" id="menu">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="statement.html">Statement</a>
+      <a href="faq.html">FAQ</a>
+      <a href="connections.html">Connections</a>
+      <a href="qa.html">Q&A</a>
+    </div>
+  </nav>
+
+  <h1>Why This Site Exists</h1>
+
+  <p>
+    Rawmedlens was born out of a desire to share real medical and anatomical imagery in a space that respects both the human body and the viewer’s right to transparency and context. What began as a curated archive on Tumblr was eventually removed due to increasingly strict content limitations, especially around medical or bodily content that doesn't neatly fit into sanitized algorithms.
+  </p>
+
+  <p>
+    This site exists to document the human form in all its vulnerability, trauma, healing, and complexity. It is not intended to sensationalize or glorify injury or medical conditions, but instead to provide an uncensored, respectful visual archive that may be of use to students, artists, researchers, or simply those curious about the physicality of human life.
+  </p>
+
+  <p>
+    Every image is posted with intent: to inform, to educate, and to preserve. While some of the material may be graphic or discomforting, it is real, and real bodies deserve understanding, not erasure.
+  </p>
+
+  <p>
+    Viewer discretion is always advised, and content warnings are provided where appropriate. Thank you for approaching this space with curiosity and care.
+  </p>
+
+  <p>
+    -Kayford
+  </p>
+
 </body>
 </html>
