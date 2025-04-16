@@ -10,9 +10,28 @@
     h1 { color: #fff; }
     input, textarea { width: 100%; padding: 0.5em; margin: 0.5em 0; border-radius: 5px; border: none; }
     button { background: #900; color: white; padding: 0.7em; border: none; border-radius: 5px; cursor: pointer; }
+    .burger { position: fixed; top: 1em; left: 1em; z-index: 1000; cursor: pointer; font-size: 24px; background: #900; padding: 0.5em 1em; border-radius: 8px; }
+    .nav { display: none; position: fixed; top: 3em; left: 1em; background: #222; padding: 1em; border-radius: 8px; }
+    .nav a { display: block; color: white; text-decoration: none; margin: 0.5em 0; }
   </style>
 </head>
 <body>
+  <div class="burger" onclick="toggleNav()">☰</div>
+  <div class="nav" id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="statement.html">Statement</a>
+    <a href="faq.html">FAQ</a>
+    <a href="connections.html">Connections</a>
+    <a href="qa.html">Q&A</a>
+  </div>
+  <script>
+    function toggleNav() {
+      var nav = document.getElementById('navMenu');
+      nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
   <h1>Connections</h1>
   <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
     <label for="email">Email (optional):</label>
